@@ -41,8 +41,6 @@ describe('Countries', () => {
       expect(results.map(country => country.cca3)).to.not.contain(first.cca3);
     });
 
-    it(`fetches a 100 countries in the first page of data by setting the pageSize = 100`);
-
   });
 
   describe('#filter(parameter)', () => {
@@ -61,7 +59,7 @@ describe('Countries', () => {
     it('shows a single country when the search parameter is an exact match', () => {
       const name = 'United States of America';
       const results = Countries.filter(name);
-      expect(results[0].name.official).to.equal(name);
+       expect(results[0].name.official).to.equal(name);
     });
 
   });
