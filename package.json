@@ -7,6 +7,8 @@
     "test": "test"
   },
   "dependencies": {
+    "lodash": "^4.15.0",
+    "world-countries": "^1.8.0"
   },
   "devDependencies": {
     "code": "^3.0.2",
