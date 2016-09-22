@@ -86,8 +86,11 @@ describe('Countries', () => {
   describe('#touches(countryCode)', () => {
 
     it('finds all the countries that touch a particular country (returns the full country object instead of the country code)', () => {
-
-      expect(Countries.touches('USA')).to.be.a('object');
+      const countries = Countries.touches('USA');
+      
+      expect(countries).to.be.an.array();
+      expect(countries).to.not.be.empty();
+      expect(countries[0]).to.be.an.object();
     });
 
   });
