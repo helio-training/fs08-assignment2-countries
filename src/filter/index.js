@@ -6,10 +6,7 @@ module.exports = (filterBy) => {
     return countries;
   }
 
-  return countries.filter(country => {
-    const exactMatch = (country.name.common === filterBy || country.name.official === filterBy);
-    const fuzzyMatch = (country.name.common.indexOf(filterBy) > 0 || country.name.official.indexOf(filterBy) > 0);
+  const filterParam = filterBy.toLowerCase();
 
-    return exactMatch || fuzzyMatch;
-  });
+  return countries.filter(country => country.name.toLowerCase().includes(filterParam) || country.name.toLowerCase().official.includes(filterParam));
 };

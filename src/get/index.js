@@ -8,7 +8,8 @@ module.exports = (code) => {
     throw new Error();
   }
 
-  const countries = getAllCountries().filter(country => country.cca3 === code.toUpperCase());
+  const formattedCode = code.toUpperCase();
+  const countries = getAllCountries().filter(country => country.cca3 === formattedCode);
   if (countries.length === 0) {
     throw new Error();
   }

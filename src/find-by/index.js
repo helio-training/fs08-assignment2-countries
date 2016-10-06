@@ -11,7 +11,7 @@ const REGIONS = _.chain(getAllCountries().map(country => country.region))
 console.log(REGIONS);
 
 module.exports = (region) => {
-
+  return getAllCountries().filter(country => country.region === region);
 };
 
 module.exports.REGIONS = REGIONS;

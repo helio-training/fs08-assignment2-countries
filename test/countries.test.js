@@ -3,9 +3,7 @@ const Countries = require('../src');
 describe('Countries', () => {
 
   describe('package.json tasks', () => {
-
     const pkg = require('../package') || {};
-
     it('installed world-countries package', () => {
       expect(pkg.dependencies).to.contain('world-countries');
     });
@@ -13,7 +11,7 @@ describe('Countries', () => {
     it('named properly', () => {
       const projectName = 'country-utilities';
       expect(pkg.name).to.equal(projectName);
-    })
+    });
 
   });
 
@@ -22,7 +20,6 @@ describe('Countries', () => {
     it(`loads all the countries by setting loadAll = true`, () => {
 
       const result = Countries.all({ loadAll: true });
-
       expect(result).to.not.be.empty();
       expect(result.length).to.be.greaterThan(15);
     });

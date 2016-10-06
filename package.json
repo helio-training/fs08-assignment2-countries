@@ -1,5 +1,5 @@
 {
-  "name": "fs08-assignment2-countries",
+  "name": "country-utilities",
   "version": "1.0.0",
   "description": "> Manipulate, Sort, and Build a Countries Management Tool",
   "main": "index.js",
