@@ -5,8 +5,7 @@ module.exports = (filterBy) => {
   if (!filterBy) {
     return countries;
   }
-
+  
   const filterParam = filterBy.toLowerCase();
-
-  return countries.filter(country => country.name.toLowerCase().includes(filterParam) || country.name.toLowerCase().official.includes(filterParam));
+  return countries.filter(country => country.name.common.toLowerCase().includes(filterParam) || country.name.official.toLowerCase().includes(filterParam));
 };
